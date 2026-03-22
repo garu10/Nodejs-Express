@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-express",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Learning nodejs express framework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garu10/Nodejs-Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garu10/Nodejs-Express/issues"
+  },
+  "homepage": "https://github.com/garu10/Nodejs-Express#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "joi": "^18.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
