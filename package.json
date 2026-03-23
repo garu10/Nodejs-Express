@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-express",
+  "name": "dialectgo-server",
   "version": "1.0.0",
   "type": "module",
   "description": "Learning nodejs express framework",
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/garu10/Nodejs-Express#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.99.3",
+    "@supabase/supabase-js": "^2.100.0",
+    "axios": "^1.13.6",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",

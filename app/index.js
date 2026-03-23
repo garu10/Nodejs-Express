@@ -4,11 +4,12 @@ import dotenv from 'dotenv';
 import supabase from './config/db.js';
 import userRoutes from "./routes/userRoutes.js";
 import errorHandling from './middlewares/errorHandler.js';
+import translationRoutes from './routes/translationRoutes.js';
 
 dotenv.config(); 
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5001;
 
 // Middlewares
 app.use(express.json());
@@ -16,6 +17,8 @@ app.use(cors());
 
 // Routes
 app.use('/api', userRoutes);
+
+app.use('/api', translationRoutes); // 2. Add this
 
 // Testing Supabase connection
 app.get('/test-supabase', async (req, res) => {
@@ -32,6 +35,7 @@ app.get('/test-supabase', async (req, res) => {
 app.use(errorHandling);
 
 // Server running
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`🚀 Server is running on http://localhost:${port}`);
+    console.log(`📱 For Expo Go, use: http://YOUR_IP_ADDRESS:${port}`);
 });
